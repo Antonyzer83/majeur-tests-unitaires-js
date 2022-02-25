@@ -5,7 +5,7 @@ import useCalculator from "../../hooks/useCalculator";
 test("addition", () => {
   const { result } = renderHook(() => useCalculator());
   let additionResult = result.current.addition('1', '1')
-  expect(additionResult).toEqual('3');
+  expect(additionResult).toEqual('2');
 });
 
 test("substraction", () => {
