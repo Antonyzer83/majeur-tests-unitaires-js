@@ -1,3 +1,5 @@
+![https://codecov.io/gh/](https://codecov.io/gh/Antonyzer83/majeur-tests-unitaires-js/branch/main/graph/badge.svg?token=1c8e636e-5420-40a6-bda7-c6aa3747ec7d)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
