@@ -10,8 +10,8 @@ function App() {
       {user && (
         <div>
           <p>Utilisateur</p>
-          <img src={user.picture.thumbnail} alt="" />
-          <p>
+          <img id="userImg" src={user.picture.thumbnail} alt="" />
+          <p id="userData">
             {user.name.title} {user.name.first} {user.name.last}
           </p>
         </div>
@@ -19,7 +19,7 @@ function App() {
       {meteo && meteo.current_condition && (
         <div>
           <p>Météo actuel</p>
-          <img src={meteo.current_condition.icon_big} alt="" />
+          <img id="meteoImg" src={meteo.current_condition.icon_big} alt="" />
         </div>
       )}
       <div className="container calculate">

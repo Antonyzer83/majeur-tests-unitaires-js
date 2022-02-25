@@ -19,6 +19,27 @@ const server = setupServer(
         })
       );
     }
+  ),
+  rest.get(
+    "https://randomuser.me/api/",
+    (req, res, ctx) => {
+      return res(
+        ctx.json({
+          "results": [
+            {
+              "name": {
+                "title": "Mrs",
+                "first": "Laura",
+                "last": "Boyd"
+              },
+              "picture": {
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/2.jpg"
+              }
+            }
+          ]
+        })
+      );
+    }
   )
 );
 
@@ -29,5 +50,12 @@ afterAll(() => server.close());
 test("load meteo mock", async () => {
   const { container } = render(<App />);
   await waitFor(() => screen.getByText(/Météo actuel/i));
-  expect(container.getElementsByTagName("img").length).toBe(1);
+  expect(container.querySelector("#meteoImg")?.getAttribute('src')).toBe("https://prevision-meteo.ch/style/images/icon/nuit-legerement-voilee-big.png");
+});
+
+test("load random user mock", async () => {
+  const { container } = render(<App />);
+  await waitFor(() => screen.getByText(/Utilisateur/i));
+  expect(container.querySelector("#userImg")?.getAttribute('src')).toBe("https://randomuser.me/api/portraits/thumb/women/2.jpg");
+  expect(container.querySelector("#userData")?.innerHTML).toBe("Mrs Laura Boyd");
 });
