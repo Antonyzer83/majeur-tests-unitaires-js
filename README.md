@@ -1,4 +1,4 @@
-![https://codecov.io/gh/](https://codecov.io/gh/Antonyzer83/majeur-tests-unitaires-js/branch/main/graph/badge.svg?token=1c8e636e-5420-40a6-bda7-c6aa3747ec7d)
+![Node CI Badge](https://github.com/Antonyzer83/majeur-tests-unitaires-js/workflows/Node%20CI/badge.svg)
 
 # Getting Started with Create React App
 

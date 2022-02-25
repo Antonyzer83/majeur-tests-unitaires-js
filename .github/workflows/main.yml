@@ -1,4 +1,4 @@
-name: CI
+name: Node CI
 
 # Controls when the workflow will run
 on:
@@ -27,7 +27,3 @@ jobs:
 
       - name: Run test
         run: npm test
-
-      - uses: codecov/codecov-action@v2
-        with:
-          token: "1c8e636e-5420-40a6-bda7-c6aa3747ec7d"
