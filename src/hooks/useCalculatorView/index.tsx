@@ -16,21 +16,21 @@ const useCalculatorView = () => {
       const values = result.split("-");
       const value1 = values[0];
       const value2 = values[1];
-      substraction(value1, value2);
+      setResult(substraction(value1, value2));
     } else if (result.includes("/")) {
       const values = result.split("/");
       const value1 = values[0];
       const value2 = values[1];
-      division(value1, value2);
+      setResult(division(value1, value2));
     } else if (result.includes("%")) {
       const values = result.split("%");
       const value1 = values[0];
       const value2 = values[1];
-      modulo(value1, value2);
+      setResult(modulo(value1, value2));
     } else if (result.includes("√x")) {
       const values = result.split("√x");
       const value1 = values[0];
-      square(value1);
+      setResult(square(value1));
     }
   };
 
